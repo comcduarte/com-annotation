@@ -43,6 +43,7 @@ class Annotations extends AbstractHelper
     			</table>
     		</div>
         </div>
+        <?php echo $this->renderAddAnnotationForm(); ?>
         <?php 
 //         $result  = '<div class="container">';
 //         $result .= '<div class="row">';
