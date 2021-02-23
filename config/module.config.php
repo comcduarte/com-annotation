@@ -65,7 +65,7 @@ return [
         'guest' => [
             'annotation' => ['index'],
         ],
-        'member' => [
+        'admin' => [
             'annotation' => ['index'],
             'annotation/annotation' => ['index', 'create', 'update', 'delete'],
             'annotation/config' => ['index','clear','create'],
