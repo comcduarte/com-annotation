@@ -4,7 +4,6 @@ namespace Annotation\Controller;
 use Annotation\Model\AnnotationModel;
 use Components\Controller\AbstractBaseController;
 use Laminas\Db\Sql\Where;
-use Laminas\View\Model\ViewModel;
 
 class AnnotationController extends AbstractBaseController
 {
@@ -25,8 +24,7 @@ class AnnotationController extends AbstractBaseController
     
     public function createAction()
     {
-        $view = new ViewModel();
-        $view = parent::createAction();
+        parent::createAction();
         
         $url = $this->getRequest()->getHeader('Referer')->getUri();
         return $this->redirect()->toUrl($url);
