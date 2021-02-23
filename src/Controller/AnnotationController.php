@@ -4,13 +4,10 @@ namespace Annotation\Controller;
 use Annotation\Model\AnnotationModel;
 use Components\Controller\AbstractBaseController;
 use Laminas\Db\Sql\Where;
-use Timecard\Traits\DateAwareTrait;
 use Laminas\View\Model\ViewModel;
 
 class AnnotationController extends AbstractBaseController
 {
-    use DateAwareTrait;
-    
     public function indexAction()
     {
         return $this->redirect()->toRoute('home');
