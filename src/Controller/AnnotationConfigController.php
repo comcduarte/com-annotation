@@ -47,7 +47,7 @@ class AnnotationConfigController extends AbstractConfigController
         $ddl->addColumn(new Varchar('TABLENAME', 100));
         $ddl->addColumn(new Varchar('PRIKEY', 36));
         $ddl->addColumn(new Varchar('USER', 36));
-        $ddl->addColumn(new Text('ANNOTATION', TRUE));
+        $ddl->addColumn(new Text('ANNOTATION', 65535, TRUE));
         
         $ddl->addConstraint(new PrimaryKey('UUID'));
         
