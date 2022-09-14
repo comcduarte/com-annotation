@@ -44,40 +44,10 @@ class Annotations extends AbstractHelper
     		</div>
         </div>
         <?php echo $this->renderAddAnnotationForm(); ?>
-        <?php 
-//         $result  = '<div class="container">';
-//         $result .= '<div class="row">';
-//         $result .= '<div class="col">';
-//         $result .= '<h3>Annotations</h3>';
-//         $result .= '</div>';
-//         $result .= '<div class="d-flex justify-content-end">';
-//         $result .= '<a href="" class="btn btn-primary btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Add Annotation</a>';
-//         $result .= '</div></div></div>';
-//         $result .= $this->renderAddAnnotationForm();
-//         $result .= '<table class="table table-sm table-striped">';
-//         $result .= '<thead>';
-//         $result .= '<tr class="d-flex"><th class="col-2">User</th><th class="col-8">Annotation</th><th class="col-2">Date Created</th></tr>';
-//         $result .= '</thead>';
-//         $result .= '<tbody>';
-
-        
-        
-//         foreach ($this->annotations as $annotation) {
-            
-//             $result .= $this->renderItem($annotation['USER'], $annotation['ANNOTATION'], $annotation['DATE_CREATED']);
-//         }
-        
-//         $result .= '</tbody>';
-//         $result .= '</table>';
-//         $result .= '</div>';
-        
-//         return $result;
     }
     
     public function renderItem($user, $note, $date)
     {
-//         $result = sprintf('<tr class="d-flex"><td class="col-2">%s</td><td class="col-8">%s</td><td class="col-2">%s</td></tr>',$user, $note, $date);
-//         return $result;
         return sprintf('<tr class="d-flex"><td class="col">%s</td><td class="col">%s</td><td class="col">%s</td></tr>',$user, $note, $date);
     }
 
@@ -93,7 +63,6 @@ class Annotations extends AbstractHelper
         		$form->prikey = $this->view->annotations_prikey;
         		$form->tablename = $this->view->annotations_tablename;
         		$form->user = $this->view->annotations_user;
-//         		$form->user = $this->view->identity();
         		$form->init();
         		
         		$form->setAttribute('action', $this->view->url('annotation/annotation', ['action' => 'create']));
@@ -106,8 +75,6 @@ class Annotations extends AbstractHelper
         		</div>
         	</div>
         </div>
-        
-    	
 		<?php 
     }
 }
