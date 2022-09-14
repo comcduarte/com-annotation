@@ -4,7 +4,7 @@ namespace Annotation\Controller\Factory;
 use Annotation\Controller\AnnotationController;
 use Annotation\Form\AnnotationForm;
 use Annotation\Model\AnnotationModel;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class AnnotationControllerFactory implements FactoryInterface
