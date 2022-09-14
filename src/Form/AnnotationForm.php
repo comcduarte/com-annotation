@@ -55,6 +55,6 @@ class AnnotationForm extends AbstractBaseForm
             ],
         ],['priority' => 10]);
         
-        $this->get('STATUS')->setAttribute('style', 'display:none;');
+        $this->remove('STATUS');
     }
 }
