@@ -65,7 +65,7 @@ return [
         'guest' => [
             'annotation' => ['index'],
         ],
-        'member' => [
+        'admin' => [
             'annotation' => ['index'],
             'annotation/annotation' => ['index', 'create', 'update', 'delete'],
             'annotation/config' => ['index','clear','create'],
@@ -107,6 +107,20 @@ return [
         ],
         'aliases' => [
             'annotations' => Annotations::class,
+        ],
+    ],
+    'view_manager' => [
+        'display_not_found_reason' => true,
+        'display_exceptions'       => true,
+        'doctype'                  => 'HTML5',
+        'not_found_template'       => 'error/404',
+        'exception_template'       => 'error/index',
+        'template_map' => [
+            'annotations'          => __DIR__ . '/../view/partials/annotations.phtml',
+            'add_annotation_form'  => __DIR__ . '/../view/partials/add-annotation-form.phtml',
+        ],
+        'template_path_stack' => [
+            __DIR__ . '/../view',
         ],
     ],
 ];
